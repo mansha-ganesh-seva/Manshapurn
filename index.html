@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>मंशापूर्ण गणेश सेवा दल</title>
+<style>
+  :root { --saffron:#FF9933; --deep:#D9731A; --cream:#FFF8EE; --brown:#3B2300; --muted:#6b4f2a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:"Noto Sans Devanagari","Mangal","Nirmala UI",sans-serif; background:var(--cream); color:var(--brown); line-height:1.75; padding-top:env(safe-area-inset-top,0px); }
+  header { position:sticky; top:env(safe-area-inset-top,0px); background:var(--deep); color:#fff; padding:14px 16px; z-index:10; box-shadow:0 2px 8px rgba(0,0,0,.2); }
+  header .logo { font-size:1.15rem; font-weight:700; }
+  nav { margin-top:8px; display:flex; flex-wrap:wrap; gap:14px; font-size:.9rem; }
+  nav a { color:#fff; text-decoration:none; opacity:.95; }
+  .hero { position:relative; text-align:center; color:#fff; padding:60px 20px; background:linear-gradient(135deg,#D9731A,#FF9933); }
+  .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(rgba(217,115,26,.82), rgba(255,153,51,.78)); }
+
+  .hero > * { position:relative; }
+  .profile { display:flex; align-items:center; justify-content:center; gap:8px; margin:44px auto 14px; }
+  .devi { width:80px; height:170px; object-fit:contain; filter:drop-shadow(0 3px 6px rgba(0,0,0,.3)); }
+  .pic-wrap { position:relative; width:160px; height:160px; flex:0 0 auto; }
+  .pic { width:160px; height:160px; border-radius:50%; object-fit:cover; object-position:50% 12%; border:4px solid #fff; box-shadow:0 4px 14px rgba(0,0,0,.25); display:block; }
+  .hero .om { position:absolute; top:-46px; left:50%; transform:translateX(-50%); font-size:2.6rem; line-height:1; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,.35); z-index:2; }
+  .hero h1 { font-size:1.7rem; margin-bottom:10px; }
+  .doha { font-size:1.05rem; background:rgba(255,255,255,.15); border-radius:12px; padding:14px 18px; max-width:620px; margin:14px auto 0; line-height:1.9; }
+  .btn { display:inline-block; margin-top:22px; background:#fff; color:var(--deep); padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:700; }
+  section { padding:40px 20px; max-width:960px; margin:0 auto; }
+  section h2 { color:var(--deep); font-size:1.5rem; margin-bottom:16px; border-bottom:3px solid var(--saffron); display:inline-block; padding-bottom:4px; }
+  .aarti { background:#fff; border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(0,0,0,.07); border-top:5px solid var(--saffron); }
+  .aarti p { font-size:1rem; line-height:2; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  .card { background:#fff; border-radius:12px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,.07); }
+  .card h3 { color:var(--deep); margin-bottom:8px; font-size:1.1rem; }
+  .card p { color:var(--muted); font-size:.95rem; }
+  .gallery { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
+  .gallery figure { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08); }
+  .gallery img { width:100%; height:240px; object-fit:cover; display:block; }
+  .gallery figcaption { text-align:center; font-size:.9rem; padding:8px; color:var(--muted); }
+  .donate-box { background:#fff; border-left:5px solid var(--saffron); border-radius:12px; padding:20px; }
+  .upi { font-size:1.1rem; font-weight:700; color:var(--deep); word-break:break-all; }
+  .contact p { margin-bottom:8px; }
+  .contact a { color:var(--deep); }
+  .copy { background:var(--saffron); color:#fff; border:none; border-radius:6px; padding:5px 10px; font-size:.85rem; font-family:inherit; cursor:pointer; margin:4px 4px; }
+  .members { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); }
+  .member { background:#fff; border-radius:12px; padding:18px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,.07); }
+  .member img { width:130px; height:130px; border-radius:50%; object-fit:cover; object-position:center top; border:3px solid var(--saffron); }
+  .member h3 { color:var(--deep); margin:10px 0 6px; font-size:1.05rem; }
+  .member p { font-size:.92rem; word-break:break-all; }
+  .member a { color:var(--deep); }
+  .rs { text-align:center; }
+  .rs h2 { display:inline-block; }
+  .rs img { width:100%; max-width:560px; border-radius:14px; box-shadow:0 4px 16px rgba(0,0,0,.15); border:3px solid #fff; display:block; margin:8px auto 0; }
+  .btn-join { display:inline-block; background:var(--deep); color:#fff; padding:12px 26px; border-radius:8px; text-decoration:none; font-weight:700; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+  .initial { width:130px; height:130px; border-radius:50%; background:var(--deep); color:#fff; font-size:3rem; line-height:130px; margin:0 auto; font-weight:700; border:3px solid var(--saffron); }
+  .search { display:block; width:100%; max-width:420px; margin:0 auto 18px; padding:11px 14px; border:2px solid var(--saffron); border-radius:10px; font-size:1rem; font-family:inherit; background:#fff; color:var(--brown); }
+  .share { display:inline-block; margin-top:8px; background:#fff; color:var(--deep); padding:9px 18px; border-radius:8px; text-decoration:none; font-weight:700; }
+  .lightbox { position:fixed; inset:0; background:rgba(0,0,0,.88); display:flex; align-items:center; justify-content:center; z-index:100; padding:16px; cursor:zoom-out; }
+  .lightbox img { max-width:100%; max-height:90vh; border-radius:10px; box-shadow:0 4px 24px rgba(0,0,0,.5); }
+  .gallery img { cursor:zoom-in; }
+  .stotra { font-size:.98rem; line-height:1.75; }
+  .stotra .couplet { display:block; margin:0 0 .45em; }
+  .stotra .couplet.end { margin-top:.6em; font-weight:700; }
+  .profile { display:flex; align-items:center; justify-content:center; gap:8px; margin:44px auto 14px; }
+  .devi { width:80px; height:170px; object-fit:contain; filter:drop-shadow(0 3px 6px rgba(0,0,0,.3)); }
+  .pic { width:160px; height:160px; border-radius:50%; object-fit:cover; object-position:50% 12%; border:4px solid #fff; box-shadow:0 4px 14px rgba(0,0,0,.25); display:block; }
+  .hero .om { position:absolute; top:-46px; left:50%; transform:translateX(-50%); font-size:2.6rem; line-height:1; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,.35); z-index:2; }
+  footer { background:var(--deep); color:#fff; text-align:center; padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px)); font-size:.92rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">मंशापूर्ण गणेश सेवा दल</div>
+  <nav>
+    <a href="#aarti">संकटनाशन स्तोत्र</a>
+    <a href="#about">परिचय</a>
+    <a href="#work">हमारे काम</a>
+    <a href="#gallery">गैलरी</a>
+    <a href="#events">कार्यक्रम</a>
+    <a href="#members">सदस्य</a>
+    <a href="#donate">दान करें</a>
+    <a href="#contact">संपर्क</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="profile"><img class="devi" src="images/devi-left.png" alt="ऋद्धि"><div class="pic-wrap"><span class="om">ॐ</span><img class="pic" src="images/ganesh1.jpg" alt="श्री गणेश जी"></div><img class="devi" src="images/devi-right.png" alt="सिद्धि"></div>
+  <h1>॥ श्री गणेशाय नमः ॥</h1>
+  <div class="doha">
+    विघ्न हरो गणराज हमारे, मंशा सबकी पूरी कर दो।<br>
+    शरण पड़े जो तेरे द्वारे, उनकी झोली भर दो॥
+  </div>
+  <a class="btn" href="#donate">सेवा में सहयोग करें</a>
+</div>
+
+<section id="aarti">
+  <h2>संकटनाशन गणेश स्तोत्रं</h2>
+  <div class="aarti">
+    <p class="stotra">
+<span class="couplet">प्रणम्यं शिरसा देव गौरीपुत्रं विनायकम।<br>भक्तावासं: स्मरैनित्यंमायु:कामार्थसिद्धये।।1।।</span>
+<span class="couplet">प्रथमं वक्रतुंडंच एकदंतं द्वितीयकम।<br>तृतीयं कृष्णं पिङा्क्षं गजवक्त्रं चतुर्थकम।।2।।</span>
+<span class="couplet">लम्बोदरं पंचमं च षष्ठं विकटमेव च।<br>सप्तमं विघ्नराजेन्द्रं धूम्रवर्ण तथाष्टकम् ।।3।।</span>
+<span class="couplet">नवमं भालचन्द्रं च दशमं तु विनायकम।<br>एकादशं गणपतिं द्वादशं तु गजाननम।।4।।</span>
+<span class="couplet">द्वादशैतानि नामानि त्रिसंध्य य: पठेन्नर:।<br>न च विघ्नभयं तस्य सर्वासिद्धिकरं प्रभो।।5।।</span>
+<span class="couplet">विद्यार्थी लभते विद्यां धनार्थी लभते धनम्।<br>पुत्रार्थी लभते पुत्रान् मोक्षार्थी लभते गतिम् ।।6।।</span>
+<span class="couplet">जपेद्वगणपतिस्तोत्रं षड्भिर्मासै: फलं लभेत्।<br>संवत्सरेण सिद्धिं च लभते नात्र संशय: ।।7।।</span>
+<span class="couplet">अष्टभ्यो ब्राह्मणेभ्यश्च लिखित्वां य: समर्पयेत।<br>तस्य विद्या भवेत्सर्वा गणेशस्य प्रसादत:।।8।।</span>
+<span class="couplet end">।।इति संकटनाशनस्तोत्रं संपूर्णम्।।</span>
+    </p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>ट्रस्ट का परिचय</h2>
+  <p><strong>मंशापूर्ण गणेश सेवा दल</strong> एक सेवा-भाव से चलने वाला संगठन है, जो बड़ा बाजार, खानपुर, झालावाड़ (राजस्थान) से जुड़ा है। हमारा उद्देश्य भगवान गणेश जी की भक्ति के साथ समाज की सेवा करना है। हम धार्मिक आयोजनों के साथ ज़रूरतमंद लोगों की मदद के लिए भी काम करते हैं।</p>
+  <div class="grid" style="margin-top:16px">
+    <div class="card"><h3>हमारा उद्देश्य</h3><p>श्रद्धा के साथ सेवा, सबके लिए।</p></div>
+    <div class="card"><h3>हमारी सोच</h3><p>भगवान गणेश सभी मनोकामनाएँ पूरी करें, यही प्रार्थना।</p></div>
+    <div class="card"><h3>पारदर्शिता</h3><p>हर सहयोग और खर्च का हिसाब साफ़ रखा जाता है।</p></div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>हमारे काम</h2>
+  <div class="grid">
+    <div class="card"><h3>गणेश उत्सव</h3><p>गणेश चतुर्थी और अन्य धार्मिक आयोजनों का आयोजन।</p></div>
+    <div class="card"><h3>भंडारा / प्रसाद सेवा</h3><p>भक्तों के लिए प्रसाद और भोजन की व्यवस्था।</p></div>
+    <div class="card"><h3>ज़रूरतमंद सहायता</h3><p>गरीब परिवारों की छोटी-बड़ी मदद।</p></div>
+    <div class="card"><h3>बच्चों की शिक्षा</h3><p>ज़रूरतमंद बच्चों के लिए किताबें और कॉपी।</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>गणेश जी की झलकियाँ</h2>
+  <div class="gallery">
+    <figure><img src="images/ganesh1.jpg" alt="गणेश जी"><figcaption>श्री गणेश दर्शन</figcaption></figure>
+    <figure><img src="images/ganesh2.jpg" alt="गणेश जी"><figcaption>गणेश जी का श्रृंगार</figcaption></figure>
+    <figure><img src="images/ganesh3.jpg" alt="गणेश जी"><figcaption>बप्पा का दरबार</figcaption></figure>
+    <figure><img src="images/ganesh4.jpg" alt="गणेश जी"><figcaption>मंशापूर्ण दर्शन</figcaption></figure>
+    <figure><img src="images/ganesh5.jpg" alt="गणेश जी"><figcaption>जय गणेश देवा</figcaption></figure>
+  </div>
+</section>
+
+<section id="events">
+  <h2>आगामी कार्यक्रम</h2>
+  <div class="aarti"><p>आने वाले कार्यक्रमों की जानकारी जल्द ही यहाँ दी जाएगी।</p></div>
+</section>
+
+<section id="members">
+  <h2>सेवा दल के सदस्य</h2>
+  <p style="text-align:center;margin-bottom:18px"><a class="btn-join" href="https://docs.google.com/forms/d/e/1FAIpQLSccJelFHnDkFeCKCvZYEF-N-QRsgbtrYm8IL1InSP7Pn_9fBQ/viewform?usp=publish-editor" target="_blank" rel="noopener">सदस्य बनें</a></p>
+  <input type="search" id="memberSearch" class="search" placeholder="सदस्य का नाम खोजें">
+  <div class="members">
+    <div class="member">
+      <img src="images/member1.jpg" alt="अंकित गौतम">
+      <h3>अंकित गौतम</h3>
+      <p><a href="tel:+917014816904">7014816904</a> · <a href="https://wa.me/917014816904" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a href="mailto:ankitgautam1711@gmail.com">ankitgautam1711@gmail.com</a></p>
+    </div>
+    <div class="member">
+      <img src="images/member2.jpg" alt="दर्शील गौतम">
+      <h3>दर्शील गौतम</h3>
+      <p><a href="tel:+917014816904">7014816904</a> · <a href="https://wa.me/917014816904" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+    <div class="member">
+      <img src="images/member3.jpg" alt="निखिलेश वयास">
+      <h3>निखिलेश वयास</h3>
+      <p><a href="tel:+917690095887">7690095887</a> · <a href="https://wa.me/917690095887" target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="donate">
+  <h2>सहयोग / दान करें</h2>
+  <div class="donate-box">
+    <p>आप UPI के ज़रिए आसानी से सहयोग कर सकते हैं:</p>
+    
+    <p style="margin-top:10px;color:var(--muted);font-size:.92rem;">सहयोग के बाद अपना नाम और फोन नंबर WhatsApp पर भेजें।</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>संपर्क करें</h2>
+  <p><strong>पता:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=%E0%A4%AC%E0%A4%A1%E0%A4%BC%E0%A4%BE%20%E0%A4%AC%E0%A4%BE%E0%A4%9C%E0%A4%BE%E0%A4%B0%2C%20%E0%A4%96%E0%A4%BE%E0%A4%A8%E0%A4%AA%E0%A5%81%E0%A4%B0%2C%20%E0%A4%9D%E0%A4%BE%E0%A4%B2%E0%A4%BE%E0%A4%B5%E0%A4%BE%E0%A4%A1%E0%A4%BC%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8" target="_blank" rel="noopener">बड़ा बाजार, खानपुर, झालावाड़ (राजस्थान)</a></p>
+  <p><strong>मोबाइल / WhatsApp:</strong> <a href="tel:+917014816904">70148 16904 (कॉल करें)</a> <button class="copy" data-v="7014816904">नंबर कॉपी करें</button> <a href="https://wa.me/917014816904" target="_blank" rel="noopener">WhatsApp खोलें</a></p>
+  <p><strong>ईमेल:</strong> <a href="mailto:ankitgautam1711@gmail.com">ankitgautam1711@gmail.com</a> <button class="copy" data-v="ankitgautam1711@gmail.com">ईमेल कॉपी करें</button></p>
+</section>
+
+<footer>
+  <p>© 2026 मंशापूर्ण गणेश सेवा दल। सर्वाधिकार सुरक्षित।</p>
+  <p>॥ जय श्री गणेश ॥</p>
+  <p><a class="share" href="https://wa.me/?text=%E0%A4%AE%E0%A4%82%E0%A4%B6%E0%A4%BE%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%A3%20%E0%A4%97%E0%A4%A3%E0%A5%87%E0%A4%B6%20%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE%20%E0%A4%A6%E0%A4%B2%20%E0%A4%95%E0%A5%80%20%E0%A4%B5%E0%A5%87%E0%A4%AC%E0%A4%B8%E0%A4%BE%E0%A4%87%E0%A4%9F%20%E0%A4%A6%E0%A5%87%E0%A4%96%E0%A5%87%E0%A4%82%3A%20https%3A//resilient-snickerdoodle-c61e9f.netlify.app" target="_blank" rel="noopener">वेबसाइट WhatsApp पर भेजें</a></p>
+</footer>
+
+<script>
+/* कॉपी बटन: नंबर या ईमेल को फोन के क्लिपबोर्ड में कॉपी करता है */
+document.querySelectorAll('.copy').forEach(function(b){
+  b.dataset.label = b.textContent;
+  b.addEventListener('click', function(){
+    var t = b.getAttribute('data-v');
+    var done = function(){ b.textContent = 'कॉपी हो गया ✓'; setTimeout(function(){ b.textContent = b.dataset.label; }, 1500); };
+    var fallback = function(){
+      var ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch(e) { b.textContent = t; }
+      ta.remove();
+    };
+    if (navigator.clipboard) { navigator.clipboard.writeText(t).then(done, fallback); } else { fallback(); }
+  });
+});
+</script>
+<script>
+/* सदस्य सूची: Google Sheet से मंज़ूर सदस्य अपने आप पढ़कर दिखाता है */
+(function(){
+  var CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRAwZQLWnm3ApGEon08rcuqIlBRrFxfKoeTkRD49NVCDUkZz4TfdYKVm8rvxpi-lFIlaStqbBJRmXGY/pub?gid=2053763468&single=true&output=csv";
+  var box = document.querySelector("#members .members");
+  if (!box) return;
+  var known = {};
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
+    known[a.getAttribute("href").replace(/\D/g, "").slice(-10)] = true;
+  });
+  fetch(CSV_URL).then(function(r){ return r.text(); }).then(function(text){
+    text.split(/\r?\n/).forEach(function(line){
+      var parts = line.split(",");
+      var name = (parts[0] || "").trim();
+      if (!name) return;
+      var phone = parts[1] ? parts[1].replace(/\D/g, "").slice(-10) : "";
+      var email = (parts[2] || "").trim();
+      var hasPhone = phone.length === 10;
+      var key = hasPhone ? phone : "n:" + name;
+      if (known[key]) return;
+      known[key] = true;
+      var card = document.createElement("div");
+      card.className = "member";
+      var circle = document.createElement("div");
+      circle.className = "initial";
+      circle.textContent = name.charAt(0);
+      var h = document.createElement("h3");
+      h.textContent = name;
+      card.appendChild(circle);
+      card.appendChild(h);
+      if (hasPhone) {
+        var p1 = document.createElement("p");
+        var call = document.createElement("a");
+        call.href = "tel:+91" + phone;
+        call.textContent = phone;
+        p1.appendChild(call);
+        var p2 = document.createElement("p");
+        var wa = document.createElement("a");
+        wa.href = "https://wa.me/91" + phone;
+        wa.target = "_blank";
+        wa.rel = "noopener";
+        wa.textContent = "WhatsApp";
+        p2.appendChild(wa);
+        card.appendChild(p1);
+        card.appendChild(p2);
+      }
+      if (email) {
+        var p3 = document.createElement("p");
+        var mail = document.createElement("a");
+        mail.href = "mailto:" + email;
+        mail.textContent = email;
+        mail.style.wordBreak = "break-all";
+        p3.appendChild(mail);
+        card.appendChild(p3);
+      }
+      box.appendChild(card);
+    });
+  }).catch(function(){});
+})();
+</script>
+<script>
+/* गैलरी की फोटो दबाने पर बड़ी दिखे */
+document.querySelectorAll('.gallery img').forEach(function(img){
+  img.addEventListener('click', function(){
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    var big = document.createElement('img');
+    big.src = img.src;
+    big.alt = img.alt;
+    box.appendChild(big);
+    box.addEventListener('click', function(){ box.remove(); });
+    document.body.appendChild(box);
+  });
+});
+/* सदस्य खोज */
+var search = document.getElementById('memberSearch');
+if (search) {
+  search.addEventListener('input', function(){
+    var q = search.value.trim().toLowerCase();
+    document.querySelectorAll('#members .member').forEach(function(card){
+      var name = (card.querySelector('h3') || {}).textContent || '';
+      card.style.display = (!q || name.toLowerCase().indexOf(q) !== -1) ? '' : 'none';
+    });
+  });
+}
+</script>
+</body>
+</html>
